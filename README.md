@@ -15,6 +15,7 @@ Réaliser un batch pour envoyer un email aux utilisateurs qui n'ont pas rendu le
 Vous devez posséder Java JRE version 8 ou supérieur sur votre machine pour pouvoir correctement utiliser l'application.
 
 ##Technologies employées
+
 `Language :`
 
 Java 8 
