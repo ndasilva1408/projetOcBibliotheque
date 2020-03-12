@@ -1,0 +1,67 @@
+<br>
+<div class="container">
+  <div class="well-block">
+    <div class="well-title">
+
+      <div class="card"  style="border-radius: 10px" *ngIf="book != null">
+        <div class="card-header text-center">
+          <h3>{{book.titre}}</h3>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-4 container-fluid">
+            <img src="{{this.book.urlimg}}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <span><strong>Auteur: </strong> {{book.auteur}}</span>
+              <hr>
+              <span><strong>Edité par:</strong>  {{book.edition}} | {{book.anneeParution}}</span>
+              <hr>
+              <hr>
+              <span class="card-text"><strong>Description de l'ouvrage:</strong> {{book.description}}</span>
+            </div>
+          </div>
+        </div>
+        <br>
+
+          <table class="table table-responsive">
+            <table class="table table-hover table-condensed table-striped text-center">
+              <thead class="book">
+              <tr>
+                <th>Ouvrage</th>
+                <th>Quantité</th>
+                <th>Site</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="clickableRow"  *ngFor="let bookS of books" >
+
+                <td>{{bookS.titre}}</td>
+                <td>{{bookS.disponible ? bookS.quantite : 'Non disponible'}}</td>
+                <td *ngIf="bookS.provenance == 1 ">Médiathèque Sainte-Croix de Bayonne</td>
+                <td *ngIf="bookS.provenance == 2 ">Médiathèque centre-ville de Bayonne</td>
+                <td *ngIf="bookS.provenance == 3 ">Bibliothèque Universitaire Florence Delay</td>
+                <td *ngIf="bookS.provenance == 4">Bibliothèque Diocésaine de Bayonne</td>
+
+              </tr>
+              </tbody>
+            </table>
+          </table>
+
+      </div>
+      <br>
+
+
+
+
+      <div class *ngIf="book == null">
+        <p>Oups... Ya un soucis !</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
