@@ -23,7 +23,7 @@
     "@fullcalendar/core": "^4.3.1",
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-slick-carousel": "^0.4.7",
     "popper.js": "^1.16.0",
     "primeicons": "^2.0.0",
